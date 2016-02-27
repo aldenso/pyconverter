@@ -9,6 +9,7 @@ config = {
         'author_email': 'aldenso@gmail.com',
         'version': '0.1',
         'install_requires': ['nose'],
+        'url': 'https://github.com/aldenso/pyconverter'
         'packages': ['pyconverter'],
         'scripts': [],
         'name': 'pyconverter'
