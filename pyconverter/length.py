@@ -19,6 +19,10 @@ class Meters(object):
         self.value = value
         self.units = 'Meters'
 
+    def getmms(self):
+        mms = ( self.value * 1000 )
+        return mms
+
     def getcms(self):
         cms = ( self.value * 100 )
         return cms
@@ -49,13 +53,17 @@ class Kms(object):
         self.value = value
         self.units = 'Kms'
 
-    def getmeters(self):
-        meters = ( self.value * 1000 )
-        return meters
+    def getmms(self):
+        mms = ( self.value * 1000000 )
+        return mms
 
     def getcms(self):
         cms = ( self.value * 100000 )
         return cms
+
+    def getmeters(self):
+        meters = ( self.value * 1000 )
+        return meters
 
     def getmiles(self):
         miles = ( self.value * 0.62137 )
@@ -77,6 +85,14 @@ class Yards(object):
     def __init__(self, value):
         self.value = value
         self.units = 'Yards'
+
+    def getmms(self):
+        mms = ( self.value / 1.0936 ) * 1000
+        return mms
+
+    def getcms(self):
+        cms = ( self.value / 1.0936 ) * 100
+        return cms
 
     def getmeters(self):
         meters = ( self.value / 1.0936 )
