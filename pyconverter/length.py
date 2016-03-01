@@ -31,17 +31,22 @@ class Meters(object):
         kms = ( self.value / 1000 )
         return kms
 
-    def getyards(self):
-        yards = ( self.value * 1.0936 )
-        return yards
+    def getinches(self):
+        inches = (self.value / 0.0254 )
+        return inches
 
     def getfeets(self):
         feets = ( self.value / 0.3048 )
         return feets
 
-    def getinches(self):
-        inches = (self.value / 0.0254 )
-        return inches
+    def getyards(self):
+        yards = ( self.value * 1.0936 )
+        return yards
+
+    def getmiles(self):
+        miles = ( self.value / 1000 ) * 0.62137 
+        return miles
+
 
 class Kms(object):
     """
@@ -65,13 +70,22 @@ class Kms(object):
         meters = ( self.value * 1000 )
         return meters
 
-    def getmiles(self):
-        miles = ( self.value * 0.62137 )
-        return miles
+    def getinches(self):
+        inches = ( self.value * 1000 ) / 0.0254 
+        return inches
+
+    def getfeets(self):
+        feets = ( self.value * 1000 ) / 0.3048 
+        return feets
 
     def getyards(self):
         yards = ( self.value * 1093.6 )
         return yards
+
+    def getmiles(self):
+        miles = ( self.value * 0.62137 )
+        return miles
+
 
 class Yards(object):
     """

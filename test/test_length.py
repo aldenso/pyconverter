@@ -8,10 +8,14 @@ def test_Meters():
 	assert_equal(cms.getcms(), 150)
 	kms = length.Meters(1300)
 	assert_equal(kms.getkms(), 1.3)
+	ins = length.Meters(1)
+	assert_equal(ins.getinches(), 39.37007874015748)
 	fts = length.Meters(2)
 	assert_equal(fts.getfeets(), 6.561679790026246)
 	yds = length.Meters(100)
 	assert_equal(yds.getyards(), 109.35999999999999)
+	mis = length.Meters(1500)
+	assert_equal(mis.getmiles(), 0.932055)
 
 
 def test_Kms():
@@ -21,10 +25,15 @@ def test_Kms():
 	assert_equal(cms.getcms(), 100000)
 	meters = length.Kms(1.3)
 	assert_equal(meters.getmeters(), 1300)
-	mis = length.Kms(2)
-	assert_equal(mis.getmiles(), 1.24274)
+	ins = length.Kms(1)
+	assert_equal(ins.getinches(), 39370.078740157485)
+	fts = length.Kms(1)
+	assert_equal(fts.getfeets(), 3280.839895013123)
 	yds = length.Kms(1)
 	assert_equal(yds.getyards(), 1093.6)
+	mis = length.Kms(2)
+	assert_equal(mis.getmiles(), 1.24274)
+
 
 def test_Yards():
 	mms = length.Yards(100)
