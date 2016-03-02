@@ -5,6 +5,48 @@ Measurement Systems:
     US Customary Units/Imperial System
 """
 
+class Cms(object):
+    """
+    =============================
+    Convert cms to other units
+    =============================
+    m = yd / 109.36
+    m = ft / 30.48
+    m = in * 2.54
+    _____________________________
+    """
+    def __init__(self, value):
+        self.value = value
+        self.units = 'Centimeters'
+
+    def getmms(self):
+        mms = ( self.value * 10 )
+        return mms
+
+    def getmeters(self):
+        cms = ( self.value / 100 )
+        return cms
+
+    def getkms(self):
+        kms = ( self.value / 100000 )
+        return kms
+
+    def getinches(self):
+        inches = (self.value / 2.54 )
+        return inches
+
+    def getfeets(self):
+        feets = ( self.value / 30.48 )
+        return feets
+
+    def getyards(self):
+        yards = ( self.value / 109.36 )
+        return yards
+
+    def getmiles(self):
+        miles = ( self.value / 100000 ) * 0.62137 
+        return miles
+
 class Meters(object):
     """
     =============================

@@ -1,6 +1,22 @@
 from nose.tools import *
 from pyconverter import length
 
+def test_Cms():
+	mms = length.Cms(1)
+	assert_equal(mms.getmms(), 10)
+	meters = length.Cms(150)
+	assert_equal(meters.getmeters(), 1.5)
+	kms = length.Cms(10000)
+	assert_equal(kms.getkms(), 0.1)
+	ins = length.Cms(100)
+	assert_equal(ins.getinches(), 39.37007874015748)
+	fts = length.Cms(100)
+	assert_equal(fts.getfeets(), 3.2808398950131235)
+	yds = length.Cms(100)
+	assert_equal(yds.getyards(), 0.9144111192392099)
+	mis = length.Cms(10000)
+	assert_equal(mis.getmiles(), 0.062137)
+
 def test_Meters():
 	mms = length.Meters(1)
 	assert_equal(mms.getmms(), 1000)
